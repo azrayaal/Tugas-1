@@ -60,3 +60,11 @@ nav {
       height: 40px;
   }
   /* end of navbar */
+
+  .button_a {
+    background-color: lightseagreen; 
+    color: white!important; 
+    height: 40px; 
+    width: 90px; 
+    border-radius: 25px;
+  }
