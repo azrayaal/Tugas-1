@@ -9,62 +9,109 @@
 body {
     min-height: 100%;
     margin: 0;
+    background-color: lightgray;
 }
 
 
 /* navbar */
 
+
 nav {
-    background-color: #ebeaea;
-    display: flex;
-    align-items: center;
-    height: 10vh;
-  }
-  
-  nav ul {
-    display: flex;
-    list-style-type: none;
-    align-items: center;
-  }
-  
-  nav ul li {
-    margin-right: 25px;
-    font-size: 20px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  
-  nav ul li .active {
-    color: lightseagreen;
-  }
-  
-  .nav-left {
-    flex: 50%;
-  }
-  
-  .nav-right {
-    flex: 50%;
-    text-align: end;
-    margin-right: 25px;
-  }
-  
-  .nav-right a {
-    background-color: lightseagreen;
-    padding: 8px 20px;
-    color: white;
-    border-radius: 5px;
-  }
-  
-  .img_logo {
-      height: 40px;
-  }
+  background-color: #F4F3F3;
+  display: flex;
+  align-items: center;
+  height: 10vh;
+}
+
+nav ul {
+  display: flex;
+  list-style-type: none;
+  align-items: center;
+}
+
+nav ul li {
+  margin-right: 15px;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+nav ul li a:hover {
+  color: orangered;
+}
+
+.nav-left {
+  flex: 50%;
+  margin-left: 50px;
+}
+
+.nav-right {
+  flex: 50%;
+  text-align: end;
+  margin-right: 50px;
+}
+
+.nav-right a {
+  background-color: orangered;
+  padding: 8px 20px;
+  color: white;
+  border-radius: 5px;
+}
+
+.img_logo {
+    height: 40px;
+}
   /* end of navbar */
 
-  .button_a {
-    background-color: lightseagreen; 
-    color: white!important; 
-    height: 40px; 
-    width: 90px; 
-    border-radius: 25px;
+  .main_content{
+    background-color: #fff;
+    margin: 30px auto;
+    padding: 10px;
+    height: 450px; 
+    width: 900px; 
+    border: 1px solid  #ccc; 
+    box-shadow: 10px 10px 5px 1px grey; 
   }
+
+  .container_card {
+    display: flex;
+    padding: 20px;
+  }
+
+  .card-right {
+    flex: 50%;
+    text-align: center; 
+    /* background-color: red; */
+  }
+
+  .card_contain{
+    /* box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2); */
+  }
+
+  .card-right img {
+    height: 300px; 
+    width: 50%; 
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+  }
+
+  .card-right img:hover {
+    box-shadow: 0 8px 25px 0 rgba(0,0,0,0.2);
+  }
+
+
+  .card-left {
+    flex: 50%;
+  }
+
+.buttona{
+  background-color: rgb(68, 67, 67);
+  padding: 8px 20px;
+  color: white;
+  border-radius: 5px;
+}
+
+.card_contain {
+
+}

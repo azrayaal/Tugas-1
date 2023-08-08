@@ -9,13 +9,19 @@
 body {
     min-height: 100%;
     margin: 0;
+    background-color: #E3E7EB;
 }
 
 
 /* navbar */
 
+
+body {
+  margin: 0;
+}
+
 nav {
-  background-color: #ebeaea;
+  background-color: #F4F3F3;
   display: flex;
   align-items: center;
   height: 10vh;
@@ -28,29 +34,31 @@ nav ul {
 }
 
 nav ul li {
-  margin-right: 25px;
-  font-size: 20px;
+  margin-right: 15px;
+  font-size: 18px;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-nav ul li .active {
-  color: lightseagreen;
+
+nav ul li a:hover {
+  color: orangered;
 }
 
 .nav-left {
   flex: 50%;
+  margin-left: 50px;
 }
 
 .nav-right {
   flex: 50%;
   text-align: end;
-  margin-right: 25px;
+  margin-right: 50px;
 }
 
 .nav-right a {
-  background-color: lightseagreen;
+  background-color: orangered;
   padding: 8px 20px;
   color: white;
   border-radius: 5px;
@@ -69,10 +77,10 @@ label{
 
 .container_form {
     border-radius: 5px;
-    background-color: #f2f2f2;
-    width: 50%;
+    background-color: #E3E7EB;
+    width: 30%;
     padding: 20px;
-    margin: 50px auto;
+    margin: 20px auto;
   }
 
 input[type=text], input[type=email], select, textarea {
@@ -84,7 +92,7 @@ input[type=text], input[type=email], select, textarea {
   margin-top: 6px;
   margin-bottom: 16px;
   resize: vertical;
-  background-color: #ccc;
+  /* background-color: #ccc; */
 
 }
 
