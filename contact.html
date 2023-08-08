@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>contact</title>
+    <link rel="stylesheet" type="text/css" href="/css/contact.css">
+</head>
+<body>
+
+  <nav>
+    <div class="nav-left">
+      <ul>
+        <li>
+          <img class="img_logo" src="/cryo-elementicon.png" alt="logo" />
+        </li>
+        <li>
+          <a href="index.html" class="">Home</a>
+        </li>
+        <li>
+          <a href="#">Blog</a>
+        </li>
+      </ul>
+    </div>
+    <div class="nav-right">
+      <a href="contact.html">Contact</a>
+    </div>
+  </nav>
+
+    <!-- form -->
+        <div class="container_form">
+          <h3 style="text-align: center;">Get in touch</h3>
+          <form action="">
+            <label for="fname">Name</label>
+            <input type="text" id="fname" name="firstname" placeholder="Your name..">
+        
+            <label for="lname">Email</label>
+            <input type="email" id="lname" name="lastname" placeholder="email">
+        
+            <label for="provider">Provider</label>
+            <select id="provider" name="provider">
+              <option value="indosat">Indosat</option>
+              <option value="telkomsel">Telkomsel</option>
+            </select>
+        
+            <label for="subject">Subject</label>
+            <textarea id="subject" name="subject" maxlength="100" placeholder="Write something.." style="height:100px;resize: none;"></textarea>
+        
+            <button class="button_submit">submit</button>
+          </form>
+    </div>
+
+    <!-- end of form -->
+</body>
+</html>
