@@ -1,0 +1,235 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,300&family=REM:wght@200&display=swap");
+
+* {
+  font-family: Arial, Helvetica, sans-serif;
+  text-decoration: none;
+  color: black;
+}
+
+body {
+  min-height: 100%;
+  margin: 0;
+  background-color: #e3e7eb;
+}
+
+/* navbar */
+
+nav {
+  background-color: #f4f3f3;
+  display: flex;
+  align-items: center;
+  height: 10vh;
+}
+
+nav ul {
+  display: flex;
+  list-style-type: none;
+  align-items: center;
+}
+
+nav ul li {
+  margin-right: 15px;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+nav ul li a:hover {
+  color: orangered;
+}
+
+.nav-left {
+  flex: 50%;
+  margin-left: 50px;
+}
+
+.nav-right {
+  flex: 50%;
+  text-align: end;
+  margin-right: 50px;
+}
+
+.nav-right a {
+  background-color: orangered;
+  padding: 8px 20px;
+  color: white;
+  border-radius: 5px;
+}
+
+.img_logo {
+  height: 40px;
+}
+/* end of navbar */
+/* ////////////////////////////////////////////////////// */
+/* form blog */
+
+label {
+  font-weight: 450;
+  font-size: large;
+}
+
+.container_form {
+  border-radius: 5px;
+  background-color: #e3e7eb;
+  width: 30%;
+  padding: 20px;
+  margin: 20px auto;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="phone"],
+input[type="date"],
+select,
+textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  /* resize: vertical; */
+}
+
+.button-post {
+  cursor: pointer;
+  background-color: grey;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  align-items: end;
+}
+
+.button_submit:hover {
+  background-color: lightseagreen;
+}
+
+.input-blog-image-group {
+  width: 100%;
+  height: 40px;
+  font-size: 20px;
+  margin-top: 5px;
+  margin-bottom: 20px;
+  background-color: white;
+  border-radius: 8px;
+  cursor: pointer;
+  box-shadow: black;
+  box-shadow: 0px 1px 5px 1px grey;
+}
+
+.input-blog-image {
+  background-color: grey;
+  border-top-left-radius: 8px;
+  border-bottom-left-radius: 8px;
+  width: 20%;
+  font-size: medium;
+  padding: 11px 10px;
+  color: white;
+}
+
+.checkbox {
+  margin: 30px 0 30px 0;
+}
+
+.label-checkbox {
+  font-size: large;
+  color: grey;
+}
+
+.blog-date-form {
+  /* background-color: red; */
+  display: flex;
+}
+
+.end-date {
+  margin-left: 10px;
+}
+
+.start-date {
+  margin-right: 10px;
+}
+
+/* end of form contact */
+
+/* ////////////////////////////////////////////////////////////// */
+
+/* blog */
+
+.blog-container {
+  display: flex;
+  background-color: #f4f3f3;
+  align-items: center;
+  justify-content: center;
+}
+
+.blog-list {
+  background-color: #fff;
+  width: 300px;
+  margin: 50px 25px 50px 25px;
+  border-radius: 10px;
+  box-shadow: black;
+  box-shadow: 0px 10px 5px 1px grey;
+}
+
+.blog-list:hover {
+  box-shadow: 0px 10px 10px 1px grey;
+}
+
+.img-blog {
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  width: 300px;
+  height: 100%;
+}
+
+.blog-list-item {
+}
+
+.blog-title {
+  font-size: 25px;
+}
+
+.blog-image {
+}
+
+.blog-content {
+  padding: 15px auto;
+}
+.blog-letter {
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.blog-letter p {
+  text-align: justify;
+  font-size: medium;
+  font-weight: 500;
+}
+
+.blog-letter .detail-blog-content {
+  font-size: small;
+  /* font-weight: 200; */
+  padding: 10px 0 0 0;
+}
+
+.button-group {
+  padding: 10px 0px 10px 0px;
+}
+
+.button-group button {
+  background-color: rgb(17, 36, 61);
+  color: white;
+  margin: 0px 15px 0px 15px;
+  padding: 8px 25px 8px 25px;
+  border-radius: 10px;
+}
+
+.button-group button:hover {
+  box-shadow: black;
+  box-shadow: 0px 1px 5px 1px grey;
+}
+
+/* end of blog */

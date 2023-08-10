@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="/css/blog.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>blog</title>
+  </head>
+  <body>
+    <nav>
+      <div class="nav-left">
+        <ul>
+          <li>
+            <img class="img_logo" src="/img/brandred.png" alt="logo" />
+          </li>
+          <li>
+            <a href="index.html" class="active">Home</a>
+          </li>
+          <li>
+            <a href="blog.html">Blog</a>
+          </li>
+        </ul>
+      </div>
+      <div class="nav-right">
+        <a href="contact.html">Contact</a>
+      </div>
+    </nav>
+
+    <!-- form add blog -->
+    <div class="container_form">
+      <form action="" onsubmit="addBlog(event)">
+        <h3 style="text-align: center">Add my project</h3>
+
+        <!-- title -->
+        <label for="name">Project Name</label>
+        <input type="text" id="input-blog-title" placeholder="Blog Title" />
+        <!-- end of title -->
+
+        <!-- date -->
+        <div class="blog-date-form">
+          <div class="start-date">
+            <label>Start date</label>
+            <input type="date" id="input-start-date" placeholder="Start date" />
+          </div>
+          <div class="end-date">
+            <label>End date</label>
+            <input type="date" id="input-end-date" placeholder="End date" />
+          </div>
+        </div>
+        <!-- end of date -->
+
+        <label for="content">Description</label>
+        <textarea
+          id="input-blog-content"
+          maxlength="100"
+          placeholder="Write something.."
+          style="height: 100px; resize: none"
+        ></textarea>
+
+        <!-- technologies -->
+        <label for="content">Technologies:</label>
+        <div class="checkbox">
+          <label class="label-checkbox"
+            >Node Js
+            <input type="checkbox" class="input-technologies" value="Node Js" />
+            <span class="checkmark"></span>
+          </label>
+          <label class="label-checkbox"
+            >React Js
+            <input
+              type="checkbox"
+              class="input-technologies"
+              value="React Js"
+            />
+            <span class="checkmark"></span>
+          </label>
+          <label class="label-checkbox"
+            >Next Js
+            <input type="checkbox" class="input-technologies" value="Next Js" />
+            <span class="checkmark"></span>
+          </label>
+          <label class="label-checkbox"
+            >Typescript
+            <input
+              type="checkbox"
+              class="input-technologies"
+              value="Typescript"
+            />
+            <span class="checkmark"></span>
+          </label>
+        </div>
+        <!-- end of technologies -->
+
+        <!-- image -->
+        <label for="image">Image</label>
+        <div class="input-blog-image-group">
+          <label for="input-blog-image">
+            <p class="input-blog-image">Attach File</p>
+            <img src="" alt="" />
+          </label>
+          <input type="file" id="input-blog-image" hidden />
+        </div>
+        <!-- end of image -->
+
+        <button class="button-post">Post</button>
+      </form>
+    </div>
+    <!-- end of add blog -->
+    <!-- <hr class="line" /> -->
+    <!-- isi blog -->
+    <div class="blog-container">
+      <div id="content" class="blog-list">
+        <div class="blog-list-item">
+          <div class="blog-image">
+            <div class="img">
+              <img class="img-blog" src="/img/klee-banner.png" alt="" />
+            </div>
+          </div>
+          <div class="blog-content">
+            <div class="blog-letter">
+              <a class="blog-title" href="blog-detail.html" target="_blank"
+                >Lorem ipsum dolor sit.</a
+              >
+              <div class="detail-blog-content">Technologies</div>
+              <p>
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Est,
+                ea. Consequuntur autem inventore libero ab expedita sapiente
+                quod nemo animi. Ipsum sequi corporis consequatur in excepturi
+                enim atque soluta perspiciatis.
+              </p>
+            </div>
+            <div class="button-group">
+              <button class="btn-edit">Edit Post</button>
+              <button class="btn-delete">Delete Post</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- additional blog list -->
+      <div id="content" class="blog-list">
+        <div class="blog-list-item">
+          <div class="blog-image">
+            <div class="img">
+              <img class="img-blog" src="/img/klee-banner.png" alt="" />
+            </div>
+          </div>
+          <div class="blog-content">
+            <div class="blog-letter">
+              <a class="blog-title" href="blog-detail.html" target="_blank"
+                >Lorem ipsum dolor sit.</a
+              >
+              <div class="detail-blog-content">Technologies</div>
+              <p>
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Est,
+                ea. Consequuntur autem inventore libero ab expedita sapiente
+                quod nemo animi. Ipsum sequi corporis consequatur in excepturi
+                enim atque soluta perspiciatis.
+              </p>
+            </div>
+            <div class="button-group">
+              <button class="btn-edit">Edit Post</button>
+              <button class="btn-delete">Delete Post</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- end additional blog list -->
+      <!-- additional blog list -->
+      <div id="content" class="blog-list">
+        <div class="blog-list-item">
+          <div class="blog-image">
+            <div class="img">
+              <img class="img-blog" src="/img/klee-banner.png" alt="" />
+            </div>
+          </div>
+          <div class="blog-content">
+            <div class="blog-letter">
+              <a class="blog-title" href="blog-detail.html" target="_blank"
+                >Lorem ipsum dolor sit.</a
+              >
+              <div class="detail-blog-content">Technologies</div>
+              <p>
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Est,
+                ea. Consequuntur autem inventore libero ab expedita sapiente
+                quod nemo animi. Ipsum sequi corporis consequatur in excepturi
+                enim atque soluta perspiciatis.
+              </p>
+            </div>
+            <div class="button-group">
+              <button class="btn-edit">Edit Post</button>
+              <button class="btn-delete">Delete Post</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- end additional blog list -->
+    </div>
+
+    <!-- end of blog -->
+  </body>
+  <script src="/js/blog.js"></script>
+</html>
