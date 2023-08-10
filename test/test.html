@@ -9,14 +9,22 @@
     <!-- /////////////////////////////////////// -->
     <h2 style="color: green">Create a checkbox and get its value</h2>
     <h3>Are you a web developer?</h3>
-    nodeJs:
-    <input type="checkbox" class="input-tech" id="nodeJs" value="nodeJs" />
-    reactJs:
-    <input type="checkbox" class="input-tech" id="reactJs" value="reactJs" />
-    <br />
-    <br />
-    <button onsubmit="checkCheckbox()">Submit</button> <br />
+    <!-- <form action="" onsubmit="addBlog(event)"> -->
+    <form action="">
+      nodeJs:
+      <input type="checkbox" class="input-tech" id="nodeJs" value="nodeJs" />
 
+      reactJs:
+      <input type="checkbox" class="input-tech" id="reactJs" value="reactJs" />
+
+      <br />
+      <br />
+
+      <button type="submit" onclick="checkCheckbox(event)">Submit</button>
+      <br />
+      <!-- <button type="submit">Submit</button> <br /> -->
+      <p id="output"></p>
+    </form>
     <!-- /////////////////////////////////////// -->
   </body>
   <script src="/test/test.js"></script>

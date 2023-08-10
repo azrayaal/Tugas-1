@@ -9,8 +9,18 @@ function addBlog(event) {
   let endDate = document.getElementById("input-end-date").value;
   let image = document.getElementById("input-blog-image").files;
   image = URL.createObjectURL(image[0]);
-
   // masukin data
+
+  // technologies
+  let technologies = [];
+
+  document.querySelectorAll('[type="checkbox"]').forEach((item) => {
+    if (item.checked === true) {
+      technologies.push(item.value);
+    }
+  });
+
+  console.log(technologies);
 
   let blog = {
     title,
@@ -18,9 +28,9 @@ function addBlog(event) {
     startDate,
     endDate,
     image,
-    // technologies,
+    technologies,
     postAt: "augst",
-    author: "azra",
+    author: "Azra Yazid",
   };
 
   dataBlog.push(blog);
@@ -31,6 +41,23 @@ function addBlog(event) {
 }
 
 // function render blog
+
+function getItemdrclick() {
+  let title = document.getElementById("input-blog-title").value;
+  let content = document.getElementById("input-blog-content").value;
+
+  let datadata = {
+    title,
+    content,
+  };
+
+  let databuatsimpen = JSON.stringify(datadata);
+  localStorage.setItem("datasimpenanBlg", databuatsimpen);
+
+  let dapetdata = JSON.parse(localStorage.getItem("datasimpenanBlg"));
+
+  console.log("dapet nih?", dapetdata);
+}
 
 function renderBlog() {
   document.getElementById("content").innerHTML = "";
@@ -43,17 +70,17 @@ function renderBlog() {
         <div class="blog-list-item">
           <div class="blog-image">
             <div class="img">
-              <img class="img-blog" src="${dataBlog[0].image}" alt="" />
+              <img class="img-blog" src="${dataBlog[index].image}" alt="" />
             </div>
           </div>
           <div class="blog-content">
             <div class="blog-letter">
-              <a class="blog-title" href="blog-detail.html" target="_blank"
-                >${dataBlog[0].title}</a
+              <a onclick="getItemdrclick()" class="blog-title" href="blog-detail.html" target="_blank"
+                >${dataBlog[index].title}</a
               >
-              <div class="detail-blog-content">Technologies</div>
+              <div class="detail-blog-content">${dataBlog[index].technologies} </div>
               <p>
-              ${dataBlog[0].content}
+              ${dataBlog[index].content}
               </p>
             </div>
             <div class="button-group">
@@ -64,3 +91,5 @@ function renderBlog() {
       </div>`;
   }
 }
+
+// function getItem
