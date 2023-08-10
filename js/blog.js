@@ -13,20 +13,25 @@ function addBlog(event) {
 
   // technologies
   let technologies = [];
-
   document.querySelectorAll('[type="checkbox"]').forEach((item) => {
     if (item.checked === true) {
       technologies.push(item.value);
     }
   });
 
-  console.log(technologies);
+  // duration
+  const date1 = new Date(startDate);
+  const date2 = new Date(endDate);
+  const time = Math.abs(date2 - date1);
+  const days = Math.ceil(time / (1000 * 60 * 60 * 24));
+  let duration = days;
 
   let blog = {
     title,
     content,
     startDate,
     endDate,
+    duration,
     image,
     technologies,
     postAt: "augst",
@@ -78,7 +83,8 @@ function renderBlog() {
               <a onclick="getItemdrclick()" class="blog-title" href="blog-detail.html" target="_blank"
                 >${dataBlog[index].title}</a
               >
-              <div class="detail-blog-content">${dataBlog[index].technologies} </div>
+              <div class="detail-blog-content">${dataBlog[index].technologies}</div>
+              <div class="duration">${dataBlog[index].duration} Days</div>
               <p>
               ${dataBlog[index].content}
               </p>

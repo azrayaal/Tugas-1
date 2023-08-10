@@ -201,6 +201,11 @@ textarea {
   max-height: 200px;
   position: relative;
 }
+
+.info-info {
+  display: flex;
+}
+
 .blog-letter {
   padding-left: 10px;
   padding-right: 10px;
@@ -218,10 +223,19 @@ textarea {
   -webkit-box-orient: vertical;
 }
 
-.blog-letter .detail-blog-content {
-  font-size: small;
-  /* font-weight: 200; */
-  padding: 10px 0 0 0;
+.detail-blog-content {
+  font-size: medium;
+  font-weight: 200;
+  padding: 10px 0 0px 0;
+  flex: 50%;
+  display: flex;
+}
+
+.duration {
+  flex: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: end;
 }
 
 .button-group {
