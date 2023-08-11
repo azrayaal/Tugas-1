@@ -77,15 +77,15 @@ nav ul li a:hover {
 
 .container_card {
   display: flex;
-  padding: 20px;
+  /* padding: 20px; */
 }
 
 .card-right {
   flex: 50%;
   text-align: center;
-  justify-content: end;
+  justify-content: center;
   display: flex;
-  padding-right: 30px;
+  /* padding-right: 30px; */
 }
 
 .card_contain {
@@ -95,7 +95,9 @@ nav ul li a:hover {
 .card-right img {
   height: 300px;
   /* width: 50%;  */
-  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+  /* box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2); */
+  width: 370px;
+  height: 450px;
 }
 
 .card-right img:hover {
