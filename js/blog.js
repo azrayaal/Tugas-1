@@ -10,26 +10,23 @@ function addBlog(event) {
   let endDate = document.getElementById("input-end-date").value;
 
   // IMAGE //////////////////////////////////////
-
-  // let image = document.getElementById("input-blog-image").files;
-  // image = URL.createObjectURL(image[0]);
+  let image = document.getElementById("input-blog-image").files;
+  image = URL.createObjectURL(image[0]);
 
   // TECHNOLOGIES /////////////////////////////
-
-  // let technologies = [];
-  // document.querySelectorAll('[type="checkbox"]').forEach((item) => {
-  //   if (item.checked === true) {
-  //     technologies.push(item.value);
-  //   }
-  // });
+  let technologies = [];
+  document.querySelectorAll('[type="checkbox"]').forEach((item) => {
+    if (item.checked === true) {
+      technologies.push(item.value);
+    }
+  });
 
   // DURATION ///////////////////////////////////
-
-  // const date1 = new Date(startDate);
-  // const date2 = new Date(endDate);
-  // const time = date2 - date1;
-  // const days = Math.ceil(time / (1000 * 60 * 60 * 24));
-  // let duration = days;
+  const date1 = new Date(startDate);
+  const date2 = new Date(endDate);
+  const time = date2 - date1;
+  const days = Math.ceil(time / (1000 * 60 * 60 * 24));
+  let duration = days;
 
   /////////////////////////////////////////////
 
@@ -38,11 +35,9 @@ function addBlog(event) {
   let blog = {
     title,
     content,
-    // startDate,
-    // endDate,
-    // duration,
-    // image,
-    // technologies,
+    duration,
+    image,
+    technologies,
     postAt: new Date(),
     author: "Azra Yazid",
   };
@@ -62,36 +57,34 @@ function renderBlog() {
     document.getElementById("content").innerHTML += `
     
         <div class="blog-list-item">
-          <div class="blog-image">
-            <div class="img">
-              <img class="img-blog" src="${dataBlog[index].image}" alt="" />
-            </div>
+      <div class="blog-image">
+        <div class="img">
+          <img class="img-blog" src="${dataBlog[index].image}" alt="" />
+        </div>
+      </div>
+      <div class="blog-content">
+        <div class="blog-letter">
+          <a class="blog-title" href="blog-detail.html" target="_blank"
+            >${dataBlog[index].title}</a
+          >
+          <div class="info-info">
+            <div class="detail-blog-content">${
+              dataBlog[index].technologies
+            }</div>
+            <div class="duration">Durasi: ${dataBlog[index].duration} Hari</div>
           </div>
-          <div class="blog-content">
-            <div class="blog-letter">
-              <a onclick="getItemdrclick()" class="blog-title" href="blog-detail.html" target="_blank"
-                >    ${getRealTime(dataBlog[index].postAt)}
-                ||${dataBlog[index].title}
-                </a
-              >
-              <div class="detail-blog-content">${
-                dataBlog[index].technologies
-              }</div>
-              <div class="duration">${dataBlog[index].duration} Days</div>
-              <p>
-              
-              ${dataBlog[index].content} || <br>
-              ${getDistanceTime(dataBlog[index].postAt)}
-           
-              </p>
-
-            </div>
-            <div class="button-group">
-              <button class="btn-edit">Edit Post</button>
-              <button class="btn-delete">Delete Post</button>
-            </div>
-          </div>
-      </div>`;
+          <p>
+          ${dataBlog[index].content} 
+          </p>
+          <p>${getRealTime(dataBlog[index].postAt)}</p>
+        </div>
+        ${getDistanceTime(dataBlog[index].postAt)}
+        <div class="button-group">
+          <button class="btn-edit">Edit Post</button>
+          <button class="btn-delete">Delete Post</button>
+        </div>
+      </div>
+    </div>`;
   }
 }
 
