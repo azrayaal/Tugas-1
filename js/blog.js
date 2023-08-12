@@ -21,6 +21,19 @@ function addBlog(event) {
     }
   });
 
+  // function ubahLogo() {
+  //   if (technologies == "nodeJs") {
+  //     return `<i ini logo NODE ceritanya>`;
+  //   } else if (technologies == "react") {
+  //     return `<i ini logo REACT ceritanya>`;
+  //   } else if (
+  //     (technologies == "reactjs" && "nodejs") ||
+  //     ("nodejs" && "react js")
+  //   ) {
+  //     return `INI LOGO REACT dan INI LOGO NODEJS`;
+  //   }
+  // }
+
   // DURATION ///////////////////////////////////
   const date1 = new Date(startDate);
   const date2 = new Date(endDate);
@@ -49,14 +62,14 @@ function addBlog(event) {
 }
 
 function renderBlog() {
-  document.getElementById("content").innerHTML = "";
+  document.getElementById("blog-list").innerHTML = "";
 
   for (let index = 0; index < dataBlog.length; index++) {
     console.log("inidatarenderblog", dataBlog[index]);
 
-    document.getElementById("content").innerHTML += `
-    
-        <div class="blog-list-item">
+    document.getElementById("blog-list").innerHTML += `
+    <div id="blog-list" >
+    <div class="blog-list-item">
       <div class="blog-image">
         <div class="img">
           <img class="img-blog" src="${dataBlog[index].image}" alt="" />
@@ -64,27 +77,35 @@ function renderBlog() {
       </div>
       <div class="blog-content">
         <div class="blog-letter">
-          <a class="blog-title" href="blog-detail.html" target="_blank"
-            >${dataBlog[index].title}</a
-          >
+          <a class="blog-title" href="blog-detail.html" target="_blank">
+          ${dataBlog[index].title}
+          </a>
           <div class="info-info">
-            <div class="detail-blog-content">${
-              dataBlog[index].technologies
-            }</div>
-            <div class="duration">Durasi: ${dataBlog[index].duration} Hari</div>
+            <div class="duration">Duration: ${
+              dataBlog[index].duration
+            } days</div>
+
+            <div class="datepost">${getRealTime(dataBlog[index].postAt)}</div>
           </div>
-          <p>
+          <p class="content-letter">
           ${dataBlog[index].content} 
           </p>
-          <p>${getRealTime(dataBlog[index].postAt)}</p>
+          <div class="detail-blog-content">
+            <div class="logos">
+            ${dataBlog[index].technologies}
+            </div>
+            <div class="postTime">${getDistanceTime(
+              dataBlog[index].postAt
+            )}</div>
+          </div>
         </div>
-        ${getDistanceTime(dataBlog[index].postAt)}
         <div class="button-group">
           <button class="btn-edit">Edit Post</button>
           <button class="btn-delete">Delete Post</button>
         </div>
       </div>
-    </div>`;
+    </div>
+  </div>`;
   }
 }
 
@@ -104,23 +125,14 @@ function getRealTime(time) {
     "Des",
   ];
 
-  // let realTime = time();
   let date = time.getDate();
   let month = time.getMonth();
   let year = time.getFullYear();
   let hours = time.getHours();
   let minutes = time.getMinutes();
 
-  // if (hours <= 9) {
-  //   // 09
-  //   hours = "0" + hours;
-  // } else if (minutes <= 9) {
-  //   minutes = "0" + minutes;
-  // }
-
-  // return `${date} ${namaBulan[month]} ${year} || ${hours}:${minutes}`;
   console.log(`${date} ${namaBulan[month]} ${year} ${hours}:${minutes} WIB`);
-  return `${date} ${namaBulan[month]} ${year} ${hours}:${minutes} WIB`;
+  return `${date} ${namaBulan[month]} ${year}`;
 }
 
 function getDistanceTime(time) {
@@ -133,7 +145,14 @@ function getDistanceTime(time) {
   let distanceMinute = Math.floor(distanceTime / (1000 * 60));
   let distanceSecond = Math.floor(distanceTime / 1000);
 
-  if (distanceDay > 0) {
+  if (
+    distanceDay ||
+    distanceHour ||
+    distanceMinute ||
+    distanceSecond == false
+  ) {
+    return `... Ago`;
+  } else if (distanceDay > 0) {
     return `${distanceDay} days ago`;
   } else if (distanceHour > 0) {
     return `${distanceHour} hour ago`;
@@ -144,6 +163,6 @@ function getDistanceTime(time) {
   }
 }
 
-setInterval(function () {
-  renderBlog();
-}, 3000);
+// setInterval(function () {
+//   renderBlog();
+// }, 3000);
