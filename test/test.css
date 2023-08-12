@@ -12,12 +12,11 @@ body {
   background-color: #e3e7eb;
 }
 
-.grid-container {
+/* .grid-container {
   display: grid;
   gap: 50px;
   grid-template-columns: auto auto auto;
   background-color: #2196f3;
-  /* padding: 10px auto; */
 }
 .grid-item {
   background-color: rgba(255, 255, 255, 0.8);
@@ -25,11 +24,11 @@ body {
   padding: 20px;
   font-size: 30px;
   text-align: center;
-}
+} */
 
 /* card */
 
-.blog-container {
+/* .blog-container {
   display: grid;
   grid-template-columns: auto auto auto;
   gap: 50px;
@@ -66,22 +65,16 @@ body {
 
 .blog-letter {
   padding: 15px 10px 0px 10px;
-  /* padding-right: 10px; */
-  /* background-color: red; */
 }
 
 .blog-title {
-  /* background-color: green;
-  color: red; */
   font-size: 20px;
   font-weight: 600;
-  /* height: 20px; */
 }
 
 .info-info {
   display: flex;
   padding: 5px 0 0px 0;
-  /* background-color: greenyellow; */
 }
 
 .datepost {
@@ -100,15 +93,13 @@ body {
 }
 
 .content-letter {
-  /* background-color: yellow; */
   text-align: justify;
   height: 70px;
   font-size: medium;
   font-weight: 500;
-  /* width: 50ch; */
   overflow: hidden;
   display: -webkit-box;
-  -webkit-line-clamp: 2; /* number of lines to show */
+  -webkit-line-clamp: 2;
   line-clamp: 3;
   -webkit-box-orient: vertical;
 }
@@ -116,7 +107,6 @@ body {
 .detail-blog-content {
   display: flex;
   padding: 10px 0 10px 0;
-  /* background-color: yellow; */
 }
 
 .logos {
@@ -135,7 +125,6 @@ body {
 
 .button-group {
   padding: 10px 0px 10px 0px;
-  /* background-color: red; */
   position: absolute;
   bottom: 0;
 }
@@ -145,11 +134,87 @@ body {
   color: white;
   margin: 0px 15px 0px 15px;
   padding: 8px 25px 8px 25px;
-  /* width: 0%; */
   border-radius: 15px;
 }
 
 .button-group button:hover {
   box-shadow: black;
   box-shadow: 0px 1px 5px 1px grey;
+} */
+
+/* test halaman depan */
+
+.container {
+  margin: 50px auto;
+  height: 70vh;
+  width: 160vh;
+  background-color: #fff;
+  border-radius: 25px;
+  box-shadow: 6px 5px 10px 4px rgba(0, 0, 0, 0.45);
+  -webkit-box-shadow: 6px 5px 10px 4px rgba(0, 0, 0, 0.45);
+  -moz-box-shadow: 6px 5px 10px 4px rgba(0, 0, 0, 0.45);
+}
+
+.main-content {
+  display: flex;
+}
+
+.content-letter {
+  flex: 70%;
+  display: flex;
+  align-items: start;
+  padding: 50px 50px 0px 20px;
+}
+
+.content-detail h1 {
+  margin-bottom: 50px;
+}
+
+.content-button .button {
+  background-color: #857ba1;
+  border: none;
+  color: white;
+  padding: 15px 35px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 20px 0 70px 0;
+  cursor: pointer;
+  border-radius: 25px;
+}
+
+.content-button .button:hover {
+  background-color: #6e6685;
+  box-shadow: 4px 4px 26px -10px rgba(0, 0, 0, 0.75);
+  -webkit-box-shadow: 4px 4px 26px -10px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 4px 4px 26px -10px rgba(0, 0, 0, 0.75);
+}
+
+.footer-content {
+  display: flex;
+}
+.logo {
+  flex: 70%;
+}
+
+.download-cv {
+  font-size: large;
+  font-weight: 500;
+}
+
+.content-img {
+  flex: 30%;
+  display: flex;
+  /* height: 70vh; */
+  align-items: center;
+  justify-content: center;
+}
+
+.content-img img {
+  max-height: 70vh;
+  min-height: 70vh;
+  width: 100%;
+  border-top-right-radius: 25px;
+  border-bottom-right-radius: 25px;
 }

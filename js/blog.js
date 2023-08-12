@@ -13,27 +13,6 @@ function addBlog(event) {
   let image = document.getElementById("input-blog-image").files;
   image = URL.createObjectURL(image[0]);
 
-  // TECHNOLOGIES /////////////////////////////
-  let technologies = [];
-  document.querySelectorAll('[type="checkbox"]').forEach((item) => {
-    if (item.checked === true) {
-      technologies.push(item.value);
-    }
-  });
-
-  // function ubahLogo() {
-  //   if (technologies == "nodeJs") {
-  //     return `<i ini logo NODE ceritanya>`;
-  //   } else if (technologies == "react") {
-  //     return `<i ini logo REACT ceritanya>`;
-  //   } else if (
-  //     (technologies == "reactjs" && "nodejs") ||
-  //     ("nodejs" && "react js")
-  //   ) {
-  //     return `INI LOGO REACT dan INI LOGO NODEJS`;
-  //   }
-  // }
-
   // DURATION ///////////////////////////////////
   const date1 = new Date(startDate);
   const date2 = new Date(endDate);
@@ -43,6 +22,14 @@ function addBlog(event) {
 
   /////////////////////////////////////////////
 
+  // TECHNOLOGIES /////////////////////////////
+  let technologies = [];
+  document.querySelectorAll('[type="checkbox"]').forEach((item) => {
+    if (item.checked === true) {
+      technologies.push(item.value);
+    }
+  });
+
   /////////////////////////
 
   let blog = {
@@ -50,14 +37,13 @@ function addBlog(event) {
     content,
     duration,
     image,
+    // logoTechnologies: ubahLogo(),
     technologies,
     postAt: new Date(),
     author: "Azra Yazid",
   };
 
   dataBlog.push(blog);
-  console.log("ini datablog dari addblog", dataBlog);
-
   renderBlog();
 }
 
@@ -65,7 +51,7 @@ function renderBlog() {
   document.getElementById("blog-list").innerHTML = "";
 
   for (let index = 0; index < dataBlog.length; index++) {
-    console.log("inidatarenderblog", dataBlog[index]);
+    console.log("inidatarenderblog", dataBlog[index].technologies);
 
     document.getElementById("blog-list").innerHTML += `
     <div id="blog-list" >
@@ -162,6 +148,43 @@ function getDistanceTime(time) {
     return `${distanceSecond} second ago`;
   }
 }
+
+// function ubahLogo(technologies) {
+//   // for (let i = 0; i < technologies.length; i++) {
+//   switch (technologies) {
+//     case "NodeJs":
+//       return `<i class="fa-brands fa-node-js fa-xl" style="margin-right: 5px"></i>`;
+//     case "ReactJs":
+//       return `<i class="fa-brands fa-react fa-xl" style="margin-right: 5px"></i>`;
+//     case "Go":
+//       return `<i class="fa-brands fa-golang fa-xl" style="margin-right: 5px"></i>`;
+//     default:
+//       console.log("None");
+//       break;
+//   }
+//   // }
+// }
+
+// function technology() {
+//   let technologies = [];
+//   document.querySelectorAll('[type="checkbox"]').forEach((item) => {
+//     if (item.checked === true) {
+//       technologies.push(item.value);
+//     }
+//   });
+
+//   technologies.forEach((value) => {
+//     switch (value) {
+//       case "NodeJs":
+//         return `hahah`;
+//         console.log("This is first");
+//         break;
+//       case "second":
+//         console.log("This is second");
+//         break;
+//     }
+//   });
+// }
 
 // setInterval(function () {
 //   renderBlog();

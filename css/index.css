@@ -1,7 +1,11 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,300&family=REM:wght@200&display=swap");
 
+@import url("https://fonts.googleapis.com/css2?family=Preahvihear&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=Mukta&display=swap");
+
 * {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Mukta", sans-serif;
   text-decoration: none;
   color: black;
 }
@@ -64,61 +68,94 @@ nav ul li a:hover {
 }
 /* end of navbar */
 
-.main_content {
+/* main content */
+
+.container {
+  margin: 50px auto;
+  height: 70vh;
+  width: 160vh;
   background-color: #fff;
-  margin: 30px auto;
-  padding: 10px;
-  height: 450px;
-  width: 900px;
-  border: 1px solid #ccc;
-  box-shadow: 10px 10px 10px 1px grey;
-  border-radius: 12px;
+  border-radius: 25px;
+  box-shadow: 10px 10px 48px 4px rgba(0, 0, 0, 0.75);
+  -webkit-box-shadow: 10px 10px 48px 4px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 10px 10px 48px 4px rgba(0, 0, 0, 0.75);
 }
 
-.container_card {
+.main-content {
   display: flex;
-  /* padding: 20px; */
 }
 
-.card-right {
-  flex: 50%;
-  text-align: center;
-  justify-content: center;
+.content-letter {
+  flex: 70%;
   display: flex;
-  /* padding-right: 30px; */
+  align-items: start;
+  padding: 10px 50px 0px 20px;
 }
 
-.card_contain {
-  /* box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2); */
+.content-detail h1 {
+  margin-bottom: 0px;
 }
 
-.card-right img {
-  height: 300px;
-  /* width: 50%;  */
-  /* box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2); */
-  width: 370px;
-  height: 450px;
+.content-detail p {
+  text-align: justify;
+  font-size: medium;
+  font-weight: 500;
 }
 
-.card-right img:hover {
-  box-shadow: 0 8px 25px 0 rgba(0, 0, 0, 0.2);
-}
-
-.card-left {
-  flex: 50%;
-}
-
-.buttona {
-  background-color: rgb(68, 67, 67);
-  padding: 8px 20px;
+.content-button .button {
+  background-color: #857ba1;
+  border: none;
   color: white;
-  border-radius: 5px;
+  padding: 10px 35px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 0px 0px 60px 0px;
+  cursor: pointer;
+  border-radius: 25px;
 }
 
-.card_contain {
-  /* background-color: aqua;  */
-  width: 50%;
-  padding: 5px;
+.content-button .button:hover {
+  background-color: #6e6685;
+  box-shadow: 4px 4px 26px -10px rgba(0, 0, 0, 0.75);
+  -webkit-box-shadow: 4px 4px 26px -10px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 4px 4px 26px -10px rgba(0, 0, 0, 0.75);
+}
+
+.footer-content {
+  display: flex;
+  /* background-color: green; */
+}
+.logo {
+  flex: 70%;
+  /* background-color: red; */
+  display: flex;
   align-items: center;
-  box-shadow: 0 8px 25px 0 rgba(0, 0, 0, 0.2);
+  justify-content: start;
+}
+
+.download-cv p {
+  flex: 30%;
+
+  display: flex;
+  font-size: larger;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.content-img {
+  flex: 30%;
+  display: flex;
+  /* height: 70vh; */
+  align-items: center;
+  justify-content: center;
+}
+
+.content-img img {
+  max-height: 70vh;
+  min-height: 70vh;
+  width: 100%;
+  border-top-right-radius: 25px;
+  border-bottom-right-radius: 25px;
 }

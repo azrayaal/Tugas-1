@@ -1,27 +1,34 @@
-function checkCheckbox(event) {
-  event.preventDefault();
-  let languages = [];
+const technologies = [];
 
-  document.querySelectorAll('[type="checkbox"]').forEach((item) => {
-    if (item.checked === true) {
-      languages.push(item.value);
-    }
-  });
+technologies.push("second");
 
-  console.log(languages);
-}
+// for (let i = 0; i < array.length; i++) {
+//   switch (array[i]) {
+//     case "first":
+//       console.log("This is first");
+//       break;
+//     case "second":
+//       console.log("This is second");
+//       break;
+//     case "third":
+//       console.log("This is third");
+//       break;
+//     case "fourth":
+//       console.log("This is fourth");
+//       break;
+//     default:
+//       console.log("None");
+//       break;
+//   }
+// }
 
-// const form = document.querySelector("form");
-
-// form.addEventListener("submit", (e) => {
-//   e.preventDefault();
-//   let languages = [];
-
-//   document.querySelectorAll('[type="checkbox"]').forEach((item) => {
-//     if (item.checked === true) {
-//       languages.push(item.value);
-//     }
-//   });
-
-//   console.log(languages);
-// });
+technologies.forEach((currValue) => {
+  switch (currValue) {
+    case "first":
+      console.log("This is first");
+      break;
+    case "second":
+      console.log("This is second");
+      break;
+  }
+});
