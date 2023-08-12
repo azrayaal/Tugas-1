@@ -32,70 +32,84 @@
     </nav>
     <!-- end of nav -->
     <!-- form add blog -->
-    <div class="container_form">
-      <form action="" onsubmit="addBlog(event)">
-        <h3 style="text-align: center">Add my project</h3>
+    <div class="container-form-main">
+      <div class="container_form">
+        <form action="" onsubmit="addBlog(event)">
+          <h3 style="text-align: center">Add my project</h3>
 
-        <!-- title -->
-        <label for="name">Project Name</label>
-        <input type="text" id="input-blog-title" placeholder="Blog Title" />
-        <!-- end of title -->
+          <!-- title -->
+          <label for="name">Project Name</label>
+          <input type="text" id="input-blog-title" placeholder="Blog Title" />
+          <!-- end of title -->
 
-        <!-- date -->
-        <div class="blog-date-form">
-          <div class="start-date">
-            <label>Start date</label>
-            <input type="date" id="input-start-date" placeholder="Start date" />
+          <!-- date -->
+          <div class="blog-date-form">
+            <div class="start-date">
+              <label>Start date</label>
+              <input
+                type="date"
+                id="input-start-date"
+                placeholder="Start date"
+              />
+            </div>
+            <div class="end-date">
+              <label>End date</label>
+              <input type="date" id="input-end-date" placeholder="End date" />
+            </div>
           </div>
-          <div class="end-date">
-            <label>End date</label>
-            <input type="date" id="input-end-date" placeholder="End date" />
+          <!-- end of date -->
+
+          <label for="content">Description</label>
+          <textarea
+            id="input-blog-content"
+            maxlength="100"
+            placeholder="Write something.."
+            style="height: 100px; resize: none"
+          ></textarea>
+
+          <!-- technologies -->
+          <label for="content">Technologies:</label>
+          <div class="checkbox">
+            <label class="label-checkbox"
+              >Node Js
+              <input
+                type="checkbox"
+                class="input-technologies"
+                value="NodeJs"
+              />
+              <span class="checkmark"></span>
+            </label>
+            <label class="label-checkbox"
+              >React Js
+              <input
+                type="checkbox"
+                class="input-technologies"
+                value="ReactJs"
+              />
+              <span class="checkmark"></span>
+            </label>
+            <label class="label-checkbox"
+              >Golang
+              <input type="checkbox" class="input-technologies" value="Go" />
+              <span class="checkmark"></span>
+            </label>
           </div>
-        </div>
-        <!-- end of date -->
 
-        <label for="content">Description</label>
-        <textarea
-          id="input-blog-content"
-          maxlength="100"
-          placeholder="Write something.."
-          style="height: 100px; resize: none"
-        ></textarea>
+          <!-- end of technologies -->
 
-        <!-- technologies -->
-        <label for="content">Technologies:</label>
-        <div class="checkbox">
-          <label class="label-checkbox"
-            >Node Js
-            <input type="checkbox" class="input-technologies" value="NodeJs" />
-            <span class="checkmark"></span>
-          </label>
-          <label class="label-checkbox"
-            >React Js
-            <input type="checkbox" class="input-technologies" value="ReactJs" />
-            <span class="checkmark"></span>
-          </label>
-          <label class="label-checkbox"
-            >Golang
-            <input type="checkbox" class="input-technologies" value="Go" />
-            <span class="checkmark"></span>
-          </label>
-        </div>
-
-        <!-- end of technologies -->
-
-        <!-- image -->
-        <label for="image">Image</label>
-        <div class="input-blog-image-group">
-          <label for="input-blog-image">
-            <p class="input-blog-image">Attach File</p>
-            <img src="" alt="" />
-          </label>
-          <input type="file" id="input-blog-image" hidden />
-        </div>
-        <!-- end of image -->
-        <button class="button-post">Post</button>
-      </form>
+          <!-- image -->
+          <label for="image">Image</label>
+          <div class="input-blog-image-group">
+            <label for="input-blog-image">
+              <p class="input-blog-image">Attach File</p>
+              <img src="" alt="" />
+            </label>
+            <input type="file" id="input-blog-image" hidden />
+          </div>
+          <!-- end of image -->
+          <button class="button-post">Post</button>
+        </form>
+      </div>
     </div>
     <!-- end of add blog -->
 
@@ -120,8 +134,8 @@
               </div>
               <p class="content-letter">
                 Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                Tenetur quam optio nisi accusamus iusto aliquid fugiat soluta
-                voluptates atque nulla.
+                Tenetur quam optsdfasdf asdfasdf sadf dsafio nisi accusamus
+                iusto aliquid fugiat soluta voluptates atque nulla.
               </p>
               <div class="detail-blog-content">
                 <div class="logos">
