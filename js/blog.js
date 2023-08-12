@@ -186,6 +186,6 @@ function getDistanceTime(time) {
 //   });
 // }
 
-// setInterval(function () {
-//   renderBlog();
-// }, 3000);
+setInterval(function () {
+  renderBlog();
+}, 3000);
