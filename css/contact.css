@@ -1,22 +1,21 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,300&family=REM:wght@200&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Mukta&display=swap");
 
-*{
-    font-family: Arial, Helvetica, sans-serif;
-    text-decoration: none;
-    color: black;
+* {
+  font-family: "Mukta", sans-serif;
+  text-decoration: none;
+  color: black;
 }
 
 body {
-    min-height: 100%;
-    margin: 0;
-    background-color: #E3E7EB;
+  min-height: 100%;
+  margin: 0;
+  background-color: #e3e7eb;
 }
-
 
 /* navbar */
 
 nav {
-  background-color: #F4F3F3;
+  background-color: #f4f3f3;
   display: flex;
   align-items: center;
   height: 10vh;
@@ -36,9 +35,8 @@ nav ul li {
   justify-content: center;
 }
 
-
 nav ul li a:hover {
-  color: orangered;
+  color: #6e6685;
 }
 
 .nav-left {
@@ -53,32 +51,58 @@ nav ul li a:hover {
 }
 
 .nav-right a {
-  background-color: orangered;
-  padding: 8px 20px;
+  background-color: #857ba1;
+  border: none;
   color: white;
-  border-radius: 5px;
+  padding: 5px 35px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 25px;
+}
+.nav-right a:hover {
+  background-color: #6e6685;
+  box-shadow: 6px 7px 8px -9px rgba(0, 0, 0, 0.75);
+  -webkit-box-shadow: 6px 7px 8px -9px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 6px 7px 8px -9px rgba(0, 0, 0, 0.75);
 }
 
 .img_logo {
-    height: 40px;
+  height: 40px;
 }
+
 /* end of navbar */
 
 /* form contact */
 
-label{
-    font-weight: 450;
+label {
+  font-weight: 450;
+}
+
+.main-container {
+  min-height: 100%;
+  background-color: red;
+  padding: 10px;
+  /* height: 100vh; */
+  background-image: url("/img/albedo-banner.png");
+  background-size: cover;
 }
 
 .container_form {
-    border-radius: 5px;
-    background-color: #E3E7EB;
-    width: 30%;
-    padding: 20px;
-    margin: 20px auto;
-  }
+  border-radius: 25px;
+  background-color: #e3e7eb;
+  width: 30%;
+  padding: 20px;
+  margin: 20px auto;
+}
 
-input[type=text], input[type=email], input[type=phone], select, textarea {
+input[type="text"],
+input[type="email"],
+input[type="phone"],
+select,
+textarea {
   width: 100%;
   padding: 12px;
   border: 1px solid #ccc;
@@ -88,19 +112,25 @@ input[type=text], input[type=email], input[type=phone], select, textarea {
   margin-bottom: 16px;
   resize: vertical;
   /* background-color: #ccc; */
-
 }
 
 .button_submit {
-cursor: pointer;
-background-color: grey;
-color: white;
-padding: 12px 20px;
-border: none;
-border-radius: 4px;
-  }
+  background-color: #857ba1;
+  border: none;
+  color: white;
+  padding: 5px 35px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 25px;
+}
 .button_submit:hover {
-    background-color: lightseagreen;
+  background-color: #6e6685;
+  box-shadow: 6px 7px 8px -9px rgba(0, 0, 0, 0.75);
+  -webkit-box-shadow: 6px 7px 8px -9px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 6px 7px 8px -9px rgba(0, 0, 0, 0.75);
 }
 
 /* end of form contact */

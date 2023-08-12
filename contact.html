@@ -1,61 +1,76 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>contact</title>
-    <link rel="SHORTCUT ICON" href="/img/brandred copy.ico" type="image/x-icon" />
-<link rel="ICON" href="/img/brandred copy.ico" type="image/ico" />
-    <link rel="stylesheet" type="text/css" href="/css/contact.css">
-</head>
-<body>
-
-  <nav>
-    <div class="nav-left">
-      <ul>
-        <li>
-          <img class="img_logo" src="/img/brandred.png" alt="logo" />
-        </li>
-        <li>
-          <a href="index.html" class="">Home</a>
-        </li>
-        <li>
-          <a href="blog.html">Blog</a>
-        </li>
-      </ul>
-    </div>
-    <div class="nav-right">
-      <a href="contact.html">Contact</a>
-    </div>
-  </nav>
+    <link
+      rel="SHORTCUT ICON"
+      href="/img/brandred copy.ico"
+      type="image/x-icon"
+    />
+    <link rel="ICON" href="/img/brandred copy.ico" type="image/ico" />
+    <link rel="stylesheet" type="text/css" href="/css/contact.css" />
+  </head>
+  <body>
+    <!-- nav -->
+    <nav>
+      <div class="nav-left">
+        <ul>
+          <li>
+            <img class="img_logo" src="/img/paimon-5.png" alt="logo" />
+          </li>
+          <li>
+            <a href="index.html" class="active">Home</a>
+          </li>
+          <li>
+            <a href="/blog.html">Blog</a>
+          </li>
+        </ul>
+      </div>
+      <div class="nav-right">
+        <a href="contact.html">Contact</a>
+      </div>
+    </nav>
+    <!-- end of nav -->
 
     <!-- form -->
-        <div class="container_form">
-          <h3 style="text-align: center;">Get in touch</h3>
-          <form action="">
-            <label for="name">Name</label>
-            <input type="text" id="input-name" placeholder="Your name..">
-        
-            <label for="email">Email</label>
-            <input type="email" id="input-email" placeholder="email">
+    <div class="main-container">
+      <div class="container_form">
+        <h3 style="text-align: center">Get in touch</h3>
+        <form action="">
+          <label for="name">Name</label>
+          <input type="text" id="input-name" placeholder="Your name.." />
 
-            <label for="phone">Phone</label>
-            <input type="phone" id="input-phone" placeholder="phone">
-        
-            <label for="subject">subject</label>
-            <select id="input-subject" name="subject">
-              <option value="indosat">Indosat</option>
-              <option value="telkomsel">Telkomsel</option>
-            </select>
-        
-            <label for="message">Subject</label>
-            <textarea id="input-message" name="message" maxlength="100" placeholder="Write something.." style="height:100px;resize: none;"></textarea>
-        
-            <button class="button_submit" type="button" onclick="submitData()">submit</button>
-          </form>
+          <label for="email">Email</label>
+          <input type="email" id="input-email" placeholder="email" />
+
+          <label for="phone">Phone</label>
+          <input type="phone" id="input-phone" placeholder="phone" />
+
+          <label for="subject">subject</label>
+          <select id="input-subject" name="subject">
+            <option value="ReactJs">ReactJs</option>
+            <option value="NodeJs">NodeJs</option>
+          </select>
+
+          <label for="message">Subject</label>
+          <textarea
+            id="input-message"
+            name="message"
+            maxlength="100"
+            placeholder="Write something.."
+            style="height: 100px; resize: none"
+          ></textarea>
+
+          <button class="button_submit" type="button" onclick="submitData()">
+            submit
+          </button>
+        </form>
+      </div>
     </div>
 
     <!-- end of form -->
-</body>
-<script src="/js/contact.js"></script>
+  </body>
+  <script src="/js/contact.js"></script>
 </html>

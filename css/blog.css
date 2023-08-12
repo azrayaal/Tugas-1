@@ -1,7 +1,7 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,300&family=REM:wght@200&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Mukta&display=swap");
 
 * {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Mukta", sans-serif;
   text-decoration: none;
   color: black;
 }
@@ -36,7 +36,7 @@ nav ul li {
 }
 
 nav ul li a:hover {
-  color: orangered;
+  color: #6e6685;
 }
 
 .nav-left {
@@ -51,15 +51,28 @@ nav ul li a:hover {
 }
 
 .nav-right a {
-  background-color: orangered;
-  padding: 8px 20px;
+  background-color: #857ba1;
+  border: none;
   color: white;
-  border-radius: 5px;
+  padding: 5px 35px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 25px;
+}
+.nav-right a:hover {
+  background-color: #6e6685;
+  box-shadow: 6px 7px 8px -9px rgba(0, 0, 0, 0.75);
+  -webkit-box-shadow: 6px 7px 8px -9px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 6px 7px 8px -9px rgba(0, 0, 0, 0.75);
 }
 
 .img_logo {
   height: 40px;
 }
+
 /* end of navbar */
 /* ////////////////////////////////////////////////////// */
 /* form blog */
