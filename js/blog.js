@@ -54,7 +54,7 @@ function renderBlog() {
     console.log("inidatarenderblog", dataBlog[index].technologies);
 
     document.getElementById("blog-list").innerHTML += `
-    <div id="blog-list" >
+
     <div class="blog-list-item">
       <div class="blog-image">
         <div class="img">
@@ -74,7 +74,7 @@ function renderBlog() {
             <div class="datepost">${getRealTime(dataBlog[index].postAt)}</div>
           </div>
           <p class="content-letter">
-          ${dataBlog[index].content} 
+          ${dataBlog[index].content}
           </p>
           <div class="detail-blog-content">
             <div class="logos">
@@ -90,7 +90,7 @@ function renderBlog() {
           <button class="btn-delete">Delete Post</button>
         </div>
       </div>
-    </div>
+
   </div>`;
   }
 }
