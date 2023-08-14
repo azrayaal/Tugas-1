@@ -10,8 +10,8 @@ function addBlog(event) {
   let endDate = document.getElementById("input-end-date").value;
 
   // IMAGE //////////////////////////////////////
-  let image = document.getElementById("input-blog-image").files;
-  image = URL.createObjectURL(image[0]);
+  // let image = document.getElementById("input-blog-image").files;
+  // image = URL.createObjectURL(image[0]);
 
   // DURATION ///////////////////////////////////
   const date1 = new Date(startDate);
@@ -29,16 +29,35 @@ function addBlog(event) {
       technologies.push(item.value);
     }
   });
-
+  // Technologies 1 value
+  function ubahLogo() {
+    if (technologies == "NodeJs") {
+      return `<i class="fa-brands fa-node-js fa-xl" style="margin-right: 5px"></i>`;
+    } else if (technologies == "ReactJs") {
+      return `<i class="fa-brands fa-react fa-xl" style="margin-right: 5px"></i>`;
+    } else if (technologies == "Go") {
+      return `<i class="fa-brands fa-golang fa-xl" style="margin-right: 5px"></i>`;
+    }
+    // node dan react
+    // if ((technologies == "NodeJs" && "ReactJs") || ("ReactJs" && "NodeJs")) {
+    //   return `<i class="fa-brands fa-react fa-xl" style="margin-right: 5px"></i>
+    //   <i class="fa-brands fa-node-js fa-xl" style="margin-right: 5px"></i>`;
+    // }
+    // // node dan golang
+    // if (technologies == ("NodeJs" && "Go") || ("Go" && "NodeJs")) {
+    //   return `<i class="fa-brands fa-golang fa-xl" style="margin-right: 5px"></i>
+    //   <i class="fa-brands fa-node-js fa-xl" style="margin-right: 5px"></i>`;
+    // }
+  }
   /////////////////////////
 
   let blog = {
     title,
     content,
     duration,
-    image,
+    // image,
     // logoTechnologies: ubahLogo(),
-    technologies,
+    technologies: ubahLogo(),
     postAt: new Date(),
     author: "Azra Yazid",
   };
@@ -54,7 +73,6 @@ function renderBlog() {
     console.log("inidatarenderblog", dataBlog[index].technologies);
 
     document.getElementById("blog-list").innerHTML += `
-
     <div class="blog-list-item">
       <div class="blog-image">
         <div class="img">
@@ -90,7 +108,6 @@ function renderBlog() {
           <button class="btn-delete">Delete Post</button>
         </div>
       </div>
-
   </div>`;
   }
 }
@@ -149,21 +166,21 @@ function getDistanceTime(time) {
   }
 }
 
-// function ubahLogo(technologies) {
-//   // for (let i = 0; i < technologies.length; i++) {
-//   switch (technologies) {
-//     case "NodeJs":
-//       return `<i class="fa-brands fa-node-js fa-xl" style="margin-right: 5px"></i>`;
-//     case "ReactJs":
-//       return `<i class="fa-brands fa-react fa-xl" style="margin-right: 5px"></i>`;
-//     case "Go":
-//       return `<i class="fa-brands fa-golang fa-xl" style="margin-right: 5px"></i>`;
-//     default:
-//       console.log("None");
-//       break;
-//   }
-//   // }
-// }
+function ubahLogo(technologies) {
+  for (let i = 0; i < technologies.length; i++) {
+    switch (technologies) {
+      case "NodeJs":
+        return `<i class="fa-brands fa-node-js fa-xl" style="margin-right: 5px"></i>`;
+      case "ReactJs":
+        return `<i class="fa-brands fa-react fa-xl" style="margin-right: 5px"></i>`;
+      case "Go":
+        return `<i class="fa-brands fa-golang fa-xl" style="margin-right: 5px"></i>`;
+      default:
+        console.log("None");
+        break;
+    }
+  }
+}
 
 // function technology() {
 //   let technologies = [];
@@ -186,6 +203,6 @@ function getDistanceTime(time) {
 //   });
 // }
 
-setInterval(function () {
-  renderBlog();
-}, 3000);
+// setInterval(function () {
+//   renderBlog();
+// }, 3000);
