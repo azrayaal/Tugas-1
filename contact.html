@@ -12,9 +12,18 @@
     <!-- nav -->
     <nav>
       <div class="nav-left">
+        <a class="anchor-img-logo-400px" href="index.html">
+          <img
+            class="img_logo-400px"
+            src="/img/scholar-circlet.png"
+            alt="logo"
+          />
+        </a>
         <ul>
           <li>
-            <img class="img_logo" src="/img/paimon-5.png" alt="logo" />
+            <a class="anchor-img-logo-normal" href="index.html">
+              <img class="img_logo" src="/img/scholar-circlet.png" alt="logo" />
+            </a>
           </li>
           <li>
             <a href="index.html" class="active">Home</a>
@@ -25,9 +34,25 @@
         </ul>
       </div>
       <div class="nav-right">
-        <a href="contact.html">Contact</a>
+        <a class="contactnav" href="contact.html">Contact</a>
+
+        <div class="buttonHamburger" onclick="openHamburger()">
+          <div id="effect-off-navbar">
+            <img src="/img/energy.png" alt="" />
+          </div>
+          <div id="effect-on-navbar">
+            <img src="/img/energy-card.png" alt="" />
+          </div>
+        </div>
       </div>
     </nav>
+    <div id="hamburger-menu">
+      <div class="hamburger">
+        <div class="bar active"><a href="index.html">Home</a></div>
+        <div class="bar"><a href="blog.html">Blog</a></div>
+        <div class="bar"><a href="contact.html">Contact</a></div>
+      </div>
+    </div>
     <!-- end of nav -->
 
     <!-- form -->
@@ -69,4 +94,5 @@
     <!-- end of form -->
   </body>
   <script src="/js/contact.js"></script>
+  <script src="/js/navbar.js"></script>
 </html>
