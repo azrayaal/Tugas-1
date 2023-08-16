@@ -13,7 +13,7 @@ body {
 }
 
 /* desktop */
-@media screen and (min-width: 400px) {
+@media screen and (min-width: 416px) {
   /* navbar */
   nav {
     background-color: #f4f3f3;
@@ -372,7 +372,7 @@ body {
 }
 
 /* mobile responsive 400px */
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 415px) {
   /* navbar */
   nav {
     background-color: #f4f3f3;

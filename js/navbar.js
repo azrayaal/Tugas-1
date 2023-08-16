@@ -1,5 +1,4 @@
 let hamburgerOpen = false;
-let effectNavbar = false;
 
 function openHamburger() {
   const hamburgerMenu = document.getElementById("hamburger-menu");

@@ -12,7 +12,7 @@ body {
   background-color: #e3e7eb;
 }
 
-@media screen and (min-width: 400px) {
+@media screen and (min-width: 416px) {
   /* navbar */
   nav {
     background-color: #f4f3f3;
@@ -151,7 +151,7 @@ body {
   /* end of form contact */
 }
 
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 415px) {
   /* navbar */
   nav {
     background-color: #f4f3f3;
