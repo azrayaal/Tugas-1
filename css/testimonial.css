@@ -138,7 +138,7 @@ body {
   /* content */
 
   .main-content-card {
-    background-color: #f4f3f3;
+    /* background-color: #f4f3f3; */
     height: 400px;
     width: 350px;
     margin: 25px;
@@ -200,7 +200,6 @@ body {
     display: flex;
     align-items: center;
     justify-content: end;
-    /* background-color: red; */
   }
 
   .nav-right .contactnav {
@@ -244,7 +243,6 @@ body {
 
   .container-testimonial-card img {
     border-radius: 25px;
-    /* height: 344px; */
     width: 100%;
   }
 
@@ -259,7 +257,6 @@ body {
     text-align: end;
     padding-right: 15px;
     font-weight: bold;
-    /* background-color: red; */
     height: 20px;
   }
 }
