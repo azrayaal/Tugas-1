@@ -24,13 +24,13 @@ body {
   /* gap: 50px; */
   justify-items: start;
   grid-template-columns: auto auto auto;
-  margin: 20px;
+  margin: 20px 20px 50px 20px;
 }
 
 .main-content-card {
   background-color: #f4f3f3;
-  height: 400px;
-  width: 350px;
+  /* height: 400px;
+  width: 350px; */
 
   border-radius: 25px;
   padding: 10px;
@@ -139,8 +139,8 @@ body {
 
   .main-content-card {
     background-color: #f4f3f3;
-    /* height: 400px; */
-    /* width: 400px; */
+    height: 400px;
+    width: 350px;
     margin: 25px;
     padding: 10px;
     border-radius: 25px;
