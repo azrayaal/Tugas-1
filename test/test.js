@@ -1,6 +1,6 @@
-const technologies = [];
+// const technologies = [];
 
-technologies.push("second");
+// technologies.push("second");
 
 // for (let i = 0; i < array.length; i++) {
 //   switch (array[i]) {
@@ -79,3 +79,6 @@ console.log(myElectric.getInfo());
 
 // polymorphism dapat membuat beberapa metode atau fungsi dengan nama yang sama, namun memiliki parameter yang berbeda.
 // abstaction
+
+
+console.log('azra');
